@@ -1,0 +1,13 @@
+{
+  "name": "vite-preload-repro",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.0.0-beta.69"
+  },
+  "type": "module"
+}
