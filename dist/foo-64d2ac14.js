@@ -1,5 +1,5 @@
-var foo = "h1 {\n	color: red;\n}";
+var foo = "";
 function hello() {
   document.body.innerHTML = `<h1>Hello!</h1>`;
 }
-export {hello};
+export { hello };

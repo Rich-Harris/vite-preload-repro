@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.0.0-beta.69"
+    "vite": "^2.8.5"
   },
   "type": "module"
 }

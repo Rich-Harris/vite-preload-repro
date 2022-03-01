@@ -1,0 +1,15 @@
+{
+  "vite/preload-helper": [],
+  "src/index.js": [],
+  "foo-64d2ac14.js": [
+    "/foo-0a0d0fb0.css"
+  ],
+  "src/foo.css": [
+    "/foo-64d2ac14.js",
+    "/foo-0a0d0fb0.css"
+  ],
+  "src/foo.js": [
+    "/foo-64d2ac14.js",
+    "/foo-0a0d0fb0.css"
+  ]
+}

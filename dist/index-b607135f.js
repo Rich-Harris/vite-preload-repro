@@ -1,14 +1,12 @@
-let scriptRel;
+const scriptRel = "modulepreload";
 const seen = {};
+const base = "/";
 const __vitePreload = function preload(baseModule, deps) {
-  if (!deps) {
+  if (!deps || deps.length === 0) {
     return baseModule();
   }
-  if (scriptRel === void 0) {
-    const relList = document.createElement("link").relList;
-    scriptRel = relList && relList.supports && relList.supports("modulepreload") ? "modulepreload" : "preload";
-  }
   return Promise.all(deps.map((dep) => {
+    dep = `${base}${dep}`;
     if (dep in seen)
       return;
     seen[dep] = true;
@@ -26,12 +24,13 @@ const __vitePreload = function preload(baseModule, deps) {
     link.href = dep;
     document.head.appendChild(link);
     if (isCss) {
-      return new Promise((res) => {
+      return new Promise((res, rej) => {
         link.addEventListener("load", res);
+        link.addEventListener("error", rej);
       });
     }
   })).then(() => baseModule());
 };
-__vitePreload(() => import("./foo-5368ca0f.js"), true ? ["/foo-5368ca0f.js","/foo-0a0d0fb0.css"] : void 0).then((foo) => {
+__vitePreload(() => import("./foo-64d2ac14.js"), true ? ["foo-64d2ac14.js","foo-0a0d0fb0.css"] : void 0).then((foo) => {
   foo.hello();
 });

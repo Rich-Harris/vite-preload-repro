@@ -1,0 +1,18 @@
+{
+  "src/index.js": {
+    "file": "index-b607135f.js",
+    "src": "src/index.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/foo.js"
+    ]
+  },
+  "src/foo.js": {
+    "file": "foo-64d2ac14.js",
+    "src": "src/foo.js",
+    "isDynamicEntry": true,
+    "css": [
+      "foo-0a0d0fb0.css"
+    ]
+  }
+}
